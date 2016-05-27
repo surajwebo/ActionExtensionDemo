@@ -42,4 +42,12 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    NSLog(@"url recieved: %@", url);
+    NSLog(@"query string: %@", [url query]);
+    NSLog(@"host: %@", [url host]);
+    NSLog(@"url path: %@", [url path]);
+    return YES;
+}
+
 @end

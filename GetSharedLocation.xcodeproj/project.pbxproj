@@ -13,7 +13,34 @@
 		CE634D2B1CF882BC00856B2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE634D291CF882BC00856B2E /* Main.storyboard */; };
 		CE634D2D1CF882BC00856B2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE634D2C1CF882BC00856B2E /* Assets.xcassets */; };
 		CE634D301CF882BC00856B2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE634D2E1CF882BC00856B2E /* LaunchScreen.storyboard */; };
+		CE634D3F1CF89EE600856B2E /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE634D3E1CF89EE600856B2E /* ActionViewController.m */; };
+		CE634D421CF89EE600856B2E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE634D401CF89EE600856B2E /* MainInterface.storyboard */; };
+		CE634D461CF89EE600856B2E /* GetLocation.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE634D3B1CF89EE600856B2E /* GetLocation.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE634D441CF89EE600856B2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE634D151CF882BC00856B2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE634D3A1CF89EE600856B2E;
+			remoteInfo = GetLocation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE634D4A1CF89EE600856B2E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE634D461CF89EE600856B2E /* GetLocation.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE634D1D1CF882BC00856B2E /* GetSharedLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetSharedLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +53,22 @@
 		CE634D2C1CF882BC00856B2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE634D2F1CF882BC00856B2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE634D311CF882BC00856B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE634D3B1CF89EE600856B2E /* GetLocation.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GetLocation.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE634D3D1CF89EE600856B2E /* ActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
+		CE634D3E1CF89EE600856B2E /* ActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		CE634D411CF89EE600856B2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		CE634D431CF89EE600856B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CE634D1A1CF882BC00856B2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE634D381CF89EE600856B2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				CE634D1F1CF882BC00856B2E /* GetSharedLocation */,
+				CE634D3C1CF89EE600856B2E /* GetLocation */,
 				CE634D1E1CF882BC00856B2E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				CE634D1D1CF882BC00856B2E /* GetSharedLocation.app */,
+				CE634D3B1CF89EE600856B2E /* GetLocation.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +120,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CE634D3C1CF89EE600856B2E /* GetLocation */ = {
+			isa = PBXGroup;
+			children = (
+				CE634D3D1CF89EE600856B2E /* ActionViewController.h */,
+				CE634D3E1CF89EE600856B2E /* ActionViewController.m */,
+				CE634D401CF89EE600856B2E /* MainInterface.storyboard */,
+				CE634D431CF89EE600856B2E /* Info.plist */,
+			);
+			path = GetLocation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,15 +141,34 @@
 				CE634D191CF882BC00856B2E /* Sources */,
 				CE634D1A1CF882BC00856B2E /* Frameworks */,
 				CE634D1B1CF882BC00856B2E /* Resources */,
+				CE634D4A1CF89EE600856B2E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE634D451CF89EE600856B2E /* PBXTargetDependency */,
 			);
 			name = GetSharedLocation;
 			productName = GetSharedLocation;
 			productReference = CE634D1D1CF882BC00856B2E /* GetSharedLocation.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CE634D3A1CF89EE600856B2E /* GetLocation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE634D471CF89EE600856B2E /* Build configuration list for PBXNativeTarget "GetLocation" */;
+			buildPhases = (
+				CE634D371CF89EE600856B2E /* Sources */,
+				CE634D381CF89EE600856B2E /* Frameworks */,
+				CE634D391CF89EE600856B2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GetLocation;
+			productName = GetLocation;
+			productReference = CE634D3B1CF89EE600856B2E /* GetLocation.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -109,6 +180,9 @@
 				ORGANIZATIONNAME = "tCognition Consultancy Pvt Ltd";
 				TargetAttributes = {
 					CE634D1C1CF882BC00856B2E = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					CE634D3A1CF89EE600856B2E = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
@@ -127,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				CE634D1C1CF882BC00856B2E /* GetSharedLocation */,
+				CE634D3A1CF89EE600856B2E /* GetLocation */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +214,14 @@
 				CE634D301CF882BC00856B2E /* LaunchScreen.storyboard in Resources */,
 				CE634D2D1CF882BC00856B2E /* Assets.xcassets in Resources */,
 				CE634D2B1CF882BC00856B2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE634D391CF89EE600856B2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE634D421CF89EE600856B2E /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +238,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE634D371CF89EE600856B2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE634D3F1CF89EE600856B2E /* ActionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE634D451CF89EE600856B2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE634D3A1CF89EE600856B2E /* GetLocation */;
+			targetProxy = CE634D441CF89EE600856B2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CE634D291CF882BC00856B2E /* Main.storyboard */ = {
@@ -172,6 +271,14 @@
 				CE634D2F1CF882BC00856B2E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CE634D401CF89EE600856B2E /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE634D411CF89EE600856B2E /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -264,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GetSharedLocation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tCognition.GetSharedLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,9 +383,32 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GetSharedLocation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tCognition.GetSharedLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CE634D481CF89EE600856B2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GetLocation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tCognition.GetSharedLocation.GetLocation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CE634D491CF89EE600856B2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GetLocation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tCognition.GetSharedLocation.GetLocation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -298,6 +429,14 @@
 			buildConfigurations = (
 				CE634D351CF882BC00856B2E /* Debug */,
 				CE634D361CF882BC00856B2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CE634D471CF89EE600856B2E /* Build configuration list for PBXNativeTarget "GetLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE634D481CF89EE600856B2E /* Debug */,
+				CE634D491CF89EE600856B2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
